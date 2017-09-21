@@ -24,3 +24,6 @@ $a = new AClass();
 $a->name = 'Jojo';
 
 var_dump($a);
+
+// Similar 'protection' exists for methods. Methods can be marked final to prevent overriding
+// by base classes
