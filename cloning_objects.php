@@ -16,3 +16,5 @@ $c = clone $a;
 echo (int)($c === $a); // outputs 0
 echo "\n";
 
+// That said, the 'clone' keyword makes a shallow copy, which means that if some properties of the cloned object are other objects, these will be shared by reference. (ouch?)
+
