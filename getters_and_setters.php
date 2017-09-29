@@ -11,4 +11,26 @@
 
  */
 
- 
+ class User {
+    // these are public for a reason!
+    public $emailUsername;
+    public $emailHost;
+
+    public function __get($email) {
+        return $this->emailUsername . '@' . $this->emailHost;
+    }
+
+    public function __set($email, $value) {
+        // assuming $value has passed email validation
+        $parts = explode('@', $value);
+        $this->emailUsername = $parts[0];
+        $this->emailHost = $parts[1];
+    }
+ }
+
+ $user = new User();
+ $user->email = 'ankush@example.com';
+ echo $user->email . "\n";
+
+ // now, the public properties of the class come to our rescue for demonstration purposes
+ echo $user->emailUsername . ', ' . $user->emailHost . "\n";
