@@ -34,3 +34,7 @@
 
  // now, the public properties of the class come to our rescue for demonstration purposes
  echo $user->emailUsername . ', ' . $user->emailHost . "\n";
+
+ /**
+  * But just like all good things, there's a catch. If the property is already defined in the class, getters and setters will NOT be called for it. :)
+  */
