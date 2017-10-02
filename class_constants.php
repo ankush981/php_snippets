@@ -16,3 +16,6 @@ class Circle {
         return $this->radius * $this->radius * pi;
     }
 }
+
+// Do note that PHP doesn't allow any kind of expressions in the const declarations;
+// even 'const $three = 1 + 2;' is not allowed.
